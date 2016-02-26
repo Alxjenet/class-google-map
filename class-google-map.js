@@ -89,7 +89,6 @@ function GoogleMap() {
      * data = {
      *    'positionDefault' : {'lat': int, 'lon': int},
      *    'dataList': [{
-     *       'id': int,
      *       'keyOrder': int,
      *       'localization': {'lat': int, 'lon': int}
      *    }]
@@ -142,7 +141,6 @@ function GoogleMap() {
      * @param resetMarkers {Boolean} Force reset of all markers
      *
      * markers = [{
-     *   'id': int,
      *   'keyOrder': int,
      *   'localization': {'lat': int, 'lon': int}
      * }]
