@@ -202,9 +202,6 @@ function GoogleMap() {
 
         // Add event on marker
         marker.addListener('click', function () {
-            document.querySelector('.marker-link').className.replace('active', '');
-            $('*[data-marker-id=' + marker['keyOrder'] + ']').addClass('active');
-            $('html,body').animate({scrollTop: $("#marker-" + marker['keyOrder']).offset().top}, 'slow');
             me.resetAllIcons();
             marker.setIcon(me.markerIconCustom);
             me.map.panTo(marker.position);
