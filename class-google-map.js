@@ -23,14 +23,14 @@ function GoogleMap() {
      *
      *  @type {String}
      */
-    this.markerIcon = 'images/map/marker2.png';
+    this.markerIcon = null;
 
     /**
      * Custom marker icon with the picture path
      *
      *  @type {String}
      */
-    this.markerIconCustom = 'images/map/marker1.png';
+    this.markerIconCustom = null;
 
     /**
      * Define location by default
