@@ -234,10 +234,13 @@ function GoogleMap() {
      *
      * @param marker {Object}
      */
-    this.mapCenterPosition = function (marker) {
+    this.mapCenterPosition = function () {
         var me = this;
-        me.markerBounds.extend(marker.position);
-        me.map.fitBounds(me.markerBounds);
+        Object.keys(me.markers).forEach(function (key, index) {
+	        me.markerBounds.extend(me.markers[key].position);
+	        me.map.fitBounds(me.markerBounds);
+        });
+
     };
 
     /**
