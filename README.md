@@ -33,73 +33,77 @@
 
 
 #### Methods availables
+------
     
-``
-    /**
-     * Create Markers.
-     * Add marker on the map and in markers collection.
-     *
-     * @param markers {Array} to create Markers
-     * @param resetMarkers {Boolean} Force reset of all markers
-     *
-     * markers = [{
-     *   'keyOrder': int,
-     *   'localization': {'lat': int, 'lon': int}
-     * }]
-     *
-     */
-``    
-    ## createMarkers(markers, resetMarkers)
-    
-``
-    /**
-     * Add a marker on the map and in the markers collection.
-     * Add Event on this marker.
-     *
-     * @param marker {Object}
-     * @param markersTotal {Number}
-     */
-``     
-    ## pushMarker(marker, markersTotal)
-    
-``
+```
+  /**
+    * Create Markers.
+    * Add marker on the map and in markers collection.
+    *
+    * @param markers {Array} to create Markers
+    * @param resetMarkers {Boolean} Force reset of all markers
+    *
+    * markers = [{
+    *   'keyOrder': int,
+    *   'localization': {'lat': int, 'lon': int}
+    * }]
+    *
+    */
+```     
+  
+##### createMarkers(markers, resetMarkers)
+------
+
+``` 
+  /**
+    * Add a marker on the map and in the markers collection.
+    * Add Event on this marker.
+    *
+    * @param marker {Object}
+    * @param markersTotal {Number}
+    */
+```     
+##### pushMarker(marker, markersTotal)
+------    
+```
     /**
      * Update position of the map following one or many markers.
      *
      * @param marker {Object}
      */
-``     
-    ## mapCenterPosition(marker)
-    
-``
+```    
+#####  mapCenterPosition(marker)
+------ 
+```
     /**
      * Reset all markers icons.
      */
-``     
-    ## resetAllIcons()
-
-``
+```    
+##### resetAllIcons()
+------
+```
     /**
      * Define opacity for a marker or many markers.
      *
      * @param value {Number}
      * @param marker {Object}
      */
-``     
-    ## opacityMarker(value, marker);
-    
-``
+```   
+##### opacityMarker(value, marker);
+------ 
+```
     /**
      * Delete all markers in the array collection.
      */
-``     
-    ## clearAllMarkers()
-
-``
+```    
+##### clearAllMarkers()
+------
+```
     /**
      * Remove one or many markers on the map.
      *
      * @param marker {Object}
      */
-``     
-    ## removeMarkerOnTheMap(marker)
+```     
+##### removeMarkerOnTheMap(marker)
+------
