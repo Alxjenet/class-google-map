@@ -5,42 +5,42 @@
 function GoogleMap() {
 
     /**
-     * Instance of the Map
+     * Instance of the Map.
      *
      * @type {Object}
      */
     this.map = {};
 
     /**
-     * Instance represents a rectangle in geographical coordinates
+     * Instance represents a rectangle in geographical coordinates.
      *
      * @type {Object}
      */
     this.markerBounds = {};
 
     /**
-     * Marker label color
+     * Marker label color.
      *
      *  @type {String}
      */
     this.markerLabelColor = '#fff';
 
     /**
-     * Marker icon by default with the picture path
+     * Marker icon by default with the picture path.
      *
      *  @type {String}
      */
     this.markerIcon = null;
 
     /**
-     * Custom marker icon with the picture path
+     * Custom marker icon with the picture path.
      *
      *  @type {String}
      */
     this.markerIconCustom = null;
 
     /**
-     * Define location by default
+     * Define location by default.
      * example = {'lat': int, 'lon': int}
      *
      * @type {Array}
@@ -48,14 +48,14 @@ function GoogleMap() {
     this.positionDefault = [];
 
     /**
-     * Define collection of markers
+     * Define collection of markers.
      *
      * @type {Array}
      */
     this.markers = [];
 
     /**
-     * Define the zoom by default
+     * Define the zoom by default.
      *
      * @type {Number}
      */
@@ -69,14 +69,14 @@ function GoogleMap() {
     this.mapTypeControl = false;
 
     /**
-     * If false, disables scrollwheel zooming on the map
+     * If false, disables scrollwheel zooming on the map.
      *
      * @type {Boolean}
      */
     this.scrollwheel = false;
 
     /**
-     * The initial enabled/disabled state of the Street View Pegman control
+     * The initial enabled/disabled state of the Street View Pegman control.
      *
      * @type {Boolean}
      */
@@ -90,7 +90,7 @@ function GoogleMap() {
     this.zoomControl = true;
 
     /**
-     * Initialization of the google map
+     * Initialization of the google map.
      * @param data {Object}
      *
      * data = {
@@ -130,7 +130,7 @@ function GoogleMap() {
     };
 
     /**
-     * Add events on map
+     * Add events on map.
      */
     this.addMapEvents = function () {
         var me = this;
@@ -141,8 +141,8 @@ function GoogleMap() {
     };
 
     /**
-     * Create Markers
-     * Add marker on the map and in markers collection
+     * Create Markers.
+     * Add marker on the map and in markers collection.
      *
      * @param markers {Array} to create Markers
      * @param resetMarkers {Boolean} Force reset of all markers
@@ -184,8 +184,8 @@ function GoogleMap() {
     };
 
     /**
-     * Add a marker on the map and in the markers collection
-     * Add Event on this marker
+     * Add a marker on the map and in the markers collection.
+     * Add Event on this marker.
      *
      * @param marker {Object}
      * @param markersTotal {Number}
@@ -235,7 +235,7 @@ function GoogleMap() {
     };
 
     /**
-     * Update position of the map following one or many markers
+     * Update position of the map following one or many markers.
      *
      * @param marker {Object}
      */
@@ -257,7 +257,7 @@ function GoogleMap() {
     };
 
     /**
-     * Reset all markers icons
+     * Reset all markers icons.
      */
     this.resetAllIcons = function () {
         var me = this;
@@ -268,63 +268,50 @@ function GoogleMap() {
     };
 
     /**
-     * Define opacity for all markers
+     * Define opacity for all markers.
      *
      * @param value {Number}
+     * @param marker {Object}
      */
-    this.opacityMarkers = function (value) {
+    this.opacityMarkers = function (value, marker) {
         var me = this;
-        Object.keys(me.markers).forEach(function (key, index) {
-            me.markers[key].setOpacity(value);
-        });
+
+        // manage opacity of a marker
+        if(marker || false){
+            marker.setOpacity(value);
+        }
+        // manage opacity of many markers
+        else {
+            Object.keys(me.markers).forEach(function (key, index) {
+                me.markers[key].setOpacity(value);
+            });
+        }
 
     };
 
     /**
-     * Show a specific marker
-     *
-     * @param marker {Object}
-     */
-    this.showMarker = function (marker) {
-        marker.setOpacity(1);
-    };
-
-    /**
-     * Hide a specific marker
-     *
-     * @param marker {Object}
-     */
-    this.hideMarker = function (marker) {
-        marker.setOpacity(0);
-    };
-
-    /**
-     * Delete all markers in the array collection
+     * Delete all markers in the array collection.
      */
     this.clearAllMarkers = function () {
         var me = this;
         // Clear Marker Collection
-        me.removeAllMarkersOnTheMap();
+        me.removeMarkerOnTheMap();
         me.markers = [];
     };
 
     /**
-     * Remove a specific marker on the map
-     *
-     * @param marker {Object}
+     * Remove one or many markers on the map.
      */
     this.removeMarkerOnTheMap = function (marker) {
-        marker.setMap(null);
-    };
-
-    /**
-     * Remove all markers on the map
-     */
-    this.removeAllMarkersOnTheMap = function () {
         var me = this;
-        Object.keys(me.markers).forEach(function (key, index) {
-            me.markers[key].setMap(null);
-        });
+        if(marker || false){
+            marker.setMap(null);
+        }
+        else {
+            Object.keys(me.markers).forEach(function (key, index) {
+                me.markers[key].setMap(null);
+            });
+        }
     };
 
 }
