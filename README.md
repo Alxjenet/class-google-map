@@ -32,11 +32,9 @@
 ```
 
 
-#### Methods availables
-------
+# Methods availables
     
-###### createMarkers(markers, resetMarkers)
-------
+## createMarkers(markers, resetMarkers)
 ```
   
  Create Markers.
