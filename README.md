@@ -37,13 +37,7 @@
     /**
      * Add events on map.
      */
-    this.addMapEvents = function () {
-        var me = this;
-        // Got to center of the map
-        me.map.addListener('goToCenter', function () {
-            me.map.panTo(me.markerBounds.getCenter());
-        });
-    };
+    ## addMapEvents()
 
     /**
      * Create Markers.
@@ -58,7 +52,7 @@
      * }]
      *
      */
-    this.createMarkers(markers, resetMarkers)
+    ## createMarkers(markers, resetMarkers)
 
     /**
      * Add a marker on the map and in the markers collection.
@@ -67,19 +61,19 @@
      * @param marker {Object}
      * @param markersTotal {Number}
      */
-    pushMarker(marker, markersTotal)
+    ## pushMarker(marker, markersTotal)
 
     /**
      * Update position of the map following one or many markers.
      *
      * @param marker {Object}
      */
-    mapCenterPosition(marker)
+    ## mapCenterPosition(marker)
 
     /**
      * Reset all markers icons.
      */
-    resetAllIcons()
+    ## resetAllIcons()
 
     /**
      * Define opacity for a marker or many markers.
@@ -87,16 +81,16 @@
      * @param value {Number}
      * @param marker {Object}
      */
-    opacityMarker(value, marker);
+    ## opacityMarker(value, marker);
 
     /**
      * Delete all markers in the array collection.
      */
-    clearAllMarkers()
+    ## clearAllMarkers()
 
     /**
      * Remove one or many markers on the map.
      *
      * @param marker {Object}
      */
-    removeMarkerOnTheMap(marker)
+    ## removeMarkerOnTheMap(marker)
