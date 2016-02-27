@@ -159,13 +159,14 @@ function GoogleMap() {
             markersTotal = markers.length,
             marker = null;
 
+        // Clear All Markers in markers collection
         if(resetMarkers || false){
             me.clearAllMarkers();
         }
 
         for (var i = 0; i < markersTotal; i++) {
 
-            // Create marker
+            // Create instance of marker
             marker = new google.maps.Marker({
                 position: {
                     lat: markers[i]['localization']['lat'],
@@ -319,5 +320,4 @@ function GoogleMap() {
             });
         }
     };
-
 }
