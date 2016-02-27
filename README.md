@@ -33,12 +33,6 @@
 
 
 #### Methods availables
-``
-    /**
-     * Add events on map.
-     */
-``
-    ## addMapEvents()
     
 ``
     /**
