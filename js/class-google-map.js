@@ -19,6 +19,13 @@ function GoogleMap() {
     this.markerBounds = {};
 
     /**
+     * Marker label color
+     *
+     *  @type {String}
+     */
+    this.markerLabelColor = '#fff';
+
+    /**
      * Marker icon by default with the picture path
      *
      *  @type {String}
@@ -151,9 +158,7 @@ function GoogleMap() {
             markersTotal = markers.length,
             marker = null;
 
-        resetMarkers = resetMarkers || false;
-
-        if(resetMarkers){
+        if(resetMarkers || false){
             me.clearAllMarkers();
         }
 
@@ -168,7 +173,7 @@ function GoogleMap() {
                 icon: me.markerIcon,
                 label: {
                     text: '' + markers[i]['keyOrder'],
-                    color: 'white'
+                    color: me.markerLabelColor
                 },
                 ZIndex: markers[i]['keyOrder'],
                 keyOrder: markers[i]['keyOrder']
@@ -192,7 +197,7 @@ function GoogleMap() {
         marker.setMap(me.map);
 
         if(markersTotal > 1){
-            // Update Position of the map
+            // Update Position map on marker
             me.mapCenterPosition(marker);
         }
         // Add Marker to collection
@@ -230,17 +235,25 @@ function GoogleMap() {
     };
 
     /**
-     * Update position of the map
+     * Update position of the map following one or many markers
      *
      * @param marker {Object}
      */
-    this.mapCenterPosition = function () {
+    this.mapCenterPosition = function (marker) {
         var me = this;
-        Object.keys(me.markers).forEach(function (key, index) {
-	        me.markerBounds.extend(me.markers[key].position);
-	        me.map.fitBounds(me.markerBounds);
-        });
 
+        // Center on a marker
+        if(marker || false){
+            me.markerBounds.extend(marker.position);
+            me.map.fitBounds(me.markerBounds);
+        }
+        // Center on many marker
+        else {
+            Object.keys(me.markers).forEach(function (key, index) {
+                me.markerBounds.extend(me.markers[key].position);
+                me.map.fitBounds(me.markerBounds);
+            });
+        }
     };
 
     /**
