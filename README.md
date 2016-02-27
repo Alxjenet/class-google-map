@@ -29,16 +29,18 @@
   
 </script>
 </body>
-
+```
 
 
 #### Methods availables
-
+``
     /**
      * Add events on map.
      */
+``
     ## addMapEvents()
-
+    
+``
     /**
      * Create Markers.
      * Add marker on the map and in markers collection.
@@ -52,8 +54,10 @@
      * }]
      *
      */
+``    
     ## createMarkers(markers, resetMarkers)
-
+    
+``
     /**
      * Add a marker on the map and in the markers collection.
      * Add Event on this marker.
@@ -61,36 +65,47 @@
      * @param marker {Object}
      * @param markersTotal {Number}
      */
+``     
     ## pushMarker(marker, markersTotal)
-
+    
+``
     /**
      * Update position of the map following one or many markers.
      *
      * @param marker {Object}
      */
+``     
     ## mapCenterPosition(marker)
-
+    
+``
     /**
      * Reset all markers icons.
      */
+``     
     ## resetAllIcons()
 
+``
     /**
      * Define opacity for a marker or many markers.
      *
      * @param value {Number}
      * @param marker {Object}
      */
+``     
     ## opacityMarker(value, marker);
-
+    
+``
     /**
      * Delete all markers in the array collection.
      */
+``     
     ## clearAllMarkers()
 
+``
     /**
      * Remove one or many markers on the map.
      *
      * @param marker {Object}
      */
+``     
     ## removeMarkerOnTheMap(marker)
