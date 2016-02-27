@@ -271,12 +271,12 @@ function GoogleMap() {
     };
 
     /**
-     * Define opacity for all markers.
+     * Define opacity for a marker or many markers.
      *
      * @param value {Number}
      * @param marker {Object}
      */
-    this.opacityMarkers = function (value, marker) {
+    this.opacityMarker = function (value, marker) {
         var me = this;
 
         // Manage opacity of a marker
@@ -289,7 +289,6 @@ function GoogleMap() {
                 me.markers[key].setOpacity(value);
             });
         }
-
     };
 
     /**
@@ -305,6 +304,8 @@ function GoogleMap() {
 
     /**
      * Remove one or many markers on the map.
+     *
+     * @param marker {Object}*
      */
     this.removeMarkerOnTheMap = function (marker) {
         var me = this;
