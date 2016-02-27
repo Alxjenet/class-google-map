@@ -33,9 +33,8 @@
 
 
 # Methods availables
-<dl>
-  <dt>createMarkers(markers, resetMarkers)</dt>
-  <dd>
+    
+###### createMarkers(markers, resetMarkers)
 ```
   
  Create Markers.
@@ -50,10 +49,8 @@
  }]
 
    
-```
-  </dd>
-</dl>
---  
+```     
+  
 ###### pushMarker(marker, markersTotal) 
 ``` 
  
