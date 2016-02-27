@@ -38,7 +38,6 @@
 ```
   
  Create Markers.
- Add marker on the map and in markers collection.
 
  @param markers {Array} To create Markers
  @param resetMarkers {Boolean} Optional Force reset of all markers
