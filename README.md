@@ -40,8 +40,8 @@
  Create Markers.
  Add marker on the map and in markers collection.
 
- @param markers {Array} to create Markers
- @param resetMarkers {Boolean} Force reset of all markers
+ @param markers {Array} To create Markers
+ @param resetMarkers {Boolean} Optional Force reset of all markers
 
  markers = [{
    'keyOrder': int,
@@ -67,7 +67,7 @@ Add Event on this marker.
    
 Update position of the map following one or many markers.
 
-@param marker {Object}
+@param marker {Object} Optional
     
 ```    
 --
@@ -84,7 +84,7 @@ Reset all markers icons.
 Define opacity for a marker or many markers.
 
 @param value {Number}
-@param marker {Object}
+@param marker {Object} Optional
     
 ```   
 --
@@ -100,6 +100,6 @@ Delete all markers in the array collection.
   
 Remove one or many markers on the map.
 
-@param marker {Object}
+@param marker {Object} Optional
    
 ```     
