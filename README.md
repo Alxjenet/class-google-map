@@ -50,7 +50,7 @@
 
    
 ```     
-  
+--  
 ###### pushMarker(marker, markersTotal) 
 ``` 
  
@@ -61,7 +61,7 @@ Add Event on this marker.
 @param markersTotal {Number}
   
 ```     
- 
+--
 ######  mapCenterPosition(marker)
 ```
    
@@ -70,14 +70,14 @@ Update position of the map following one or many markers.
 @param marker {Object}
     
 ```    
-
+--
 ###### resetAllIcons()
 ```
    
 Reset all markers icons.
     
 ```    
-
+--
 ###### opacityMarker(value, marker);
 ```
    
@@ -87,14 +87,14 @@ Define opacity for a marker or many markers.
 @param marker {Object}
     
 ```   
- 
+--
 ###### clearAllMarkers()
 ```
    
 Delete all markers in the array collection.
     
 ```
-
+--
 ###### removeMarkerOnTheMap(marker)
 ```
   
