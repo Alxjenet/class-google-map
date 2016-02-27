@@ -111,6 +111,7 @@ function GoogleMap() {
             lng: data['positionDefault']['lon']
         };
 
+        // Create instance of google map
         me.map = new google.maps.Map(document.getElementById('google-map'), {
             zoom: me.zoom,
             zoomControl: me.zoomControl,
@@ -261,6 +262,7 @@ function GoogleMap() {
      */
     this.resetAllIcons = function () {
         var me = this;
+
         Object.keys(me.markers).forEach(function (key, index) {
             me.markers[key].setIcon(me.markerIcon);
             me.markers[key].setZIndex(0);
@@ -276,11 +278,11 @@ function GoogleMap() {
     this.opacityMarkers = function (value, marker) {
         var me = this;
 
-        // manage opacity of a marker
+        // Manage opacity of a marker
         if(marker || false){
             marker.setOpacity(value);
         }
-        // manage opacity of many markers
+        // Manage opacity of many markers
         else {
             Object.keys(me.markers).forEach(function (key, index) {
                 me.markers[key].setOpacity(value);
@@ -294,6 +296,7 @@ function GoogleMap() {
      */
     this.clearAllMarkers = function () {
         var me = this;
+
         // Clear Marker Collection
         me.removeMarkerOnTheMap();
         me.markers = [];
@@ -304,9 +307,12 @@ function GoogleMap() {
      */
     this.removeMarkerOnTheMap = function (marker) {
         var me = this;
+
+        // Remove a marker on the map
         if(marker || false){
             marker.setMap(null);
         }
+        // Remove many markers on the map
         else {
             Object.keys(me.markers).forEach(function (key, index) {
                 me.markers[key].setMap(null);
