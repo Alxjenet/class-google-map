@@ -34,7 +34,7 @@
 
 # Methods availables
     
-## createMarkers(markers, resetMarkers)
+###### createMarkers(markers, resetMarkers)
 ```
   
  Create Markers.
@@ -51,8 +51,7 @@
    
 ```     
   
-###### pushMarker(marker, markersTotal)
------- 
+###### pushMarker(marker, markersTotal) 
 ``` 
  
 Add a marker on the map and in the markers collection.
@@ -64,7 +63,6 @@ Add Event on this marker.
 ```     
  
 ######  mapCenterPosition(marker)
------- 
 ```
    
 Update position of the map following one or many markers.
@@ -74,7 +72,6 @@ Update position of the map following one or many markers.
 ```    
 
 ###### resetAllIcons()
-------
 ```
    
 Reset all markers icons.
@@ -82,7 +79,6 @@ Reset all markers icons.
 ```    
 
 ###### opacityMarker(value, marker);
------- 
 ```
    
 Define opacity for a marker or many markers.
@@ -93,14 +89,13 @@ Define opacity for a marker or many markers.
 ```   
  
 ###### clearAllMarkers()
-------
 ```
    
 Delete all markers in the array collection.
     
+```
 
 ###### removeMarkerOnTheMap(marker)
-------
 ```
   
 Remove one or many markers on the map.
